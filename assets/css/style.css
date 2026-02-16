@@ -1,0 +1,118 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --rosa-suave: #fff0f5; /* Lavender Blush */
+    --rosa-destaque: #f8bbd0; /* Rosa pastel mais forte */
+    --texto: #5d4037;
+}
+
+body {
+    background-color: var(--rosa-suave);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--rosa-destaque);
+}
+
+.profile-pic {
+    width: 300px;
+    height:300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--rosa-destaque);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    color: #c2185b;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    font-weight:800;
+}
+
+/* Galeria Grid Responsiva */
+.gallery-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #c2185b;
+}
+
+.photo-grid {
+    display: grid;
+    /* Cria colunas automáticas com no mínimo 250px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.photo-item img:hover {
+    transform: scale(1.03);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--rosa-destaque);
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--texto);
+    margin: 0 15px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Ajustes para Telas Pequenas */
+@media (max-width: 600px) {
+    .social-links a {
+        display: block;
+        margin: 10px 0;
+    }
+}
